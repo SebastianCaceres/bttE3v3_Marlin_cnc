@@ -501,9 +501,9 @@ else ifeq ($(HARDWARE_MOTHERBOARD),1319)
 # Geeetech GT2560 Rev B for A20(M/T/D)
 else ifeq ($(HARDWARE_MOTHERBOARD),1320)
 # Einstart retrofit
-else ifeq ($(HARDWARE_MOTHERBOARD),1321)
+else ifeq ($(HARDWARE_MOTHERBOARD),1319)
 # Wanhao 0ne+ i3 Mini
-else ifeq ($(HARDWARE_MOTHERBOARD),1322)
+else ifeq ($(HARDWARE_MOTHERBOARD),1320)
 # Leapfrog Xeed 2015
 else ifeq ($(HARDWARE_MOTHERBOARD),1323)
 # PICA Shield (original version)
