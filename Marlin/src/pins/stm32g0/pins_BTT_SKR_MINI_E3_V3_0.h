@@ -102,12 +102,6 @@
 #define E0_STEP_PIN                         PB3
 #define E0_DIR_PIN                          PB4
 
-// CNC Spindle control
-//
-#define SPINDLE_LASER_ENA_PIN               PA2   // "XMAX" - relay for spindle
-#define COOLANT_MIST_PIN                    PA1   // "YMAX" - relay for mist M7
-#define COOLANT_FLOOD_PIN                   PC0   // "ZMIN" - relay for flood M8
-
 #if HAS_TMC_UART
   /**
    * TMC220x stepper drivers
