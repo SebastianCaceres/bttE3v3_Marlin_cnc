@@ -256,7 +256,32 @@
       #define TFTGLCD_CS                    PA9
 
     #endif
+  #elif ENABLED(FYSETC_MINI_12864_2_1)
+    // Beeper pin
+    #define BEEPER_PIN PD5  // Maps to PD5 in Klipper
 
+    // Pins for DOGM SPI LCD Support
+    #define DOGLCD_A0  PB8  // Maps to PB8 in Klipper (A0 pin)
+    #define DOGLCD_CS  PB9  // Maps to PB9 in Klipper (CS pin)
+    #define LCD_BACKLIGHT_PIN -1  // No backlight defined in Klipper config
+    #define LCD_RESET_PIN  PD6  // Maps to PD6 in Klipper (RST pin)
+    #define DOGLCD_SCK PA5
+    #define DOGLCD_MOSI PA7
+
+    // SD card support (left default as in original schema)
+    //#define SDSS -1  
+
+    // Button and encoder pins
+    #define KILL_PIN -1  // No kill pin defined in Klipper config
+    #define LCD_CONTRAST 63  // Directly matches Klipper's contrast value
+    #define BTN_EN1 PB5  // Maps to PB5 in Klipper (encoder_pins first pin)
+    #define BTN_EN2 PA15  // Maps to PA15 in Klipper (encoder_pins second pin)
+    #define BTN_ENC PA10  // Maps to PA10 in Klipper (click_pin)
+
+    #define FORCE_SOFT_SPI
+
+    // SD card detect (default value retained)
+    //#define SD_DETECT_PIN -1  
   #else
     #error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the BIGTREE_SKR_MINI_E3."
   #endif
