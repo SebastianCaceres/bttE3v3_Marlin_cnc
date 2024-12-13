@@ -66,7 +66,7 @@
 //
 //===========================================================================
 
-// @section info
+// @section info test
 
 // Author info of this build printed to the host during boot and M115
 #define STRING_CONFIG_H_AUTHOR "(teachingtech, 3018 CNC)" // Who made the changes.
