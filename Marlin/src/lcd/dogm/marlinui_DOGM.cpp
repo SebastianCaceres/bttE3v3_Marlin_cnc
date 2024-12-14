@@ -93,7 +93,8 @@ U8G_CLASS u8g;
 #endif
 
 #if HAS_LCD_CONTRAST
-  void MarlinUI::_set_contrast() { u8g.setContrast(contrast); }
+//tocheck
+  void MarlinUI::_set_contrast() { u8g.setContrast(255); }
 #endif
 
 void MarlinUI::set_font(const MarlinFont font_nr) {
