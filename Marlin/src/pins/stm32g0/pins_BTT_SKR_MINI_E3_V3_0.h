@@ -65,8 +65,15 @@
 // Filament Runout Sensor
 //
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN                    PC15  // E0-STOP
+  //#define FIL_RUNOUT_PIN                    PC15  // E0-STOP
 #endif
+
+
+
+#ifndef SPINDLE_LASER_PWM_PIN
+  #define SPINDLE_LASER_PWM_PIN                    PC15  // E0-STOP
+#endif
+
 
 //
 // Power-loss Detection
@@ -104,7 +111,7 @@
 
 // CNC Spindle control
 //
-#define SPINDLE_LASER_ENA_PIN               PA2   // "XMAX" - relay for spindle
+#define SPINDLE_LASER_ENA_PIN               PC15   // "XMAX" - relay for spindle
 #define COOLANT_MIST_PIN                    PA1   // "YMAX" - relay for mist M7
 #define COOLANT_FLOOD_PIN                   PC0   // "ZMIN" - relay for flood M8
 
