@@ -59,7 +59,7 @@
 //
 // Z Probe must be this pin
 //
-#define Z_MIN_PROBE_PIN                     PC14  // PROBE
+//#define Z_MIN_PROBE_PIN                     PC14  // PROBE
 
 //
 // Filament Runout Sensor
@@ -113,7 +113,7 @@
 //
 #define SPINDLE_LASER_ENA_PIN               PC15   // "XMAX" - relay for spindle
 #define COOLANT_MIST_PIN                    PA1   // "YMAX" - relay for mist M7
-#define COOLANT_FLOOD_PIN                   PC0   // "ZMIN" - relay for flood M8
+//#define COOLANT_FLOOD_PIN                   PC0   // "ZMIN" - relay for flood M8
 
 #if HAS_TMC_UART
   /**

@@ -1171,7 +1171,7 @@
 //#define MICROSTEP32 HIGH,LOW,HIGH
 
 // Microstep settings (Requires a board with pins named X_MS1, X_MS2, etc.)
-#define MICROSTEP_MODES { 8, 8, 8, 8, 8, 8 } // [1,2,4,8,16]
+#define MICROSTEP_MODES { 16, 16, 16, 16, 16, 16 } // [1,2,4,8,16]
 
 /**
  *  @section  stepper motor current
@@ -1232,7 +1232,7 @@
 // @section lcd
 
 #if ANY(HAS_LCD_MENU, EXTENSIBLE_UI, HAS_DWIN_E3V2)
-  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60} // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+  #define MANUAL_FEEDRATE { 1000, 1000, 4*60} // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
   #define FINE_MANUAL_MOVE 0.025    // (mm) Smallest manual move (< 0.1mm) applying to Z on most machines
   #if IS_ULTIPANEL
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
@@ -1241,7 +1241,7 @@
 #endif
 
 // Change values more rapidly when the encoder is rotated faster
-#define ENCODER_RATE_MULTIPLIER
+// #define ENCODER_RATE_MULTIPLIER
 #if ENABLED(ENCODER_RATE_MULTIPLIER)
   #define ENCODER_10X_STEPS_PER_SEC   30  // (steps/s) Encoder rate for 10x speed
   #define ENCODER_100X_STEPS_PER_SEC  80  // (steps/s) Encoder rate for 100x speed
@@ -2657,8 +2657,8 @@
   #if AXIS_IS_TMC(X)
     #define X_CURRENT       1000        // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
-    #define X_MICROSTEPS     8        // 0..256
-    #define X_RSENSE          0.09
+    #define X_MICROSTEPS     16        // 0..256
+    #define X_RSENSE          0.11
     #define X_CHAIN_POS      -1        // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ...
     //#define X_INTERPOLATE  true      // Enable to override 'INTERPOLATE' for the X axis
   #endif
@@ -2675,8 +2675,8 @@
   #if AXIS_IS_TMC(Y)
     #define Y_CURRENT       1000
     #define Y_CURRENT_HOME  Y_CURRENT
-    #define Y_MICROSTEPS     8
-    #define Y_RSENSE          0.09
+    #define Y_MICROSTEPS     16
+    #define Y_RSENSE          .11
     #define Y_CHAIN_POS      -1
     //#define Y_INTERPOLATE  true
   #endif
@@ -2693,8 +2693,8 @@
   #if AXIS_IS_TMC(Z)
     #define Z_CURRENT       1000
     #define Z_CURRENT_HOME  Z_CURRENT
-    #define Z_MICROSTEPS     8
-    #define Z_RSENSE          0.09
+    #define Z_MICROSTEPS     16
+    #define Z_RSENSE          .11
     #define Z_CHAIN_POS      -1
     //#define Z_INTERPOLATE  true
   #endif
@@ -2896,12 +2896,12 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  #define STEALTHCHOP_XY
-  #define STEALTHCHOP_Z
-  #define STEALTHCHOP_I
-  #define STEALTHCHOP_J
-  #define STEALTHCHOP_K
-  #define STEALTHCHOP_E
+  // #define STEALTHCHOP_XY
+  // #define STEALTHCHOP_Z
+  // #define STEALTHCHOP_I
+  // #define STEALTHCHOP_J
+  // #define STEALTHCHOP_K
+  // #define STEALTHCHOP_E
 
   /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets
@@ -3578,7 +3578,7 @@
  *
  * Note: COOLANT_MIST_PIN and/or COOLANT_FLOOD_PIN must also be defined.
  */
-#define COOLANT_CONTROL
+//#define COOLANT_CONTROL
 #if ENABLED(COOLANT_CONTROL)
   #define COOLANT_MIST                // Enable if mist coolant is present
   #define COOLANT_FLOOD               // Enable if flood coolant is present
